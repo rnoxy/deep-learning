@@ -1,7 +1,7 @@
 version: "3.0"
 services:
   main:
-    image: rnoxy/deep-learning:cuda11.2
+    image: rnoxy/deep-learning
     build: .
     ports:
       - "45822:22"

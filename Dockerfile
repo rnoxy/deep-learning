@@ -7,8 +7,12 @@ ARG python_version=3.8
 ARG DLUSER_UID=999
 ARG DLUSER_GID=0
 
+ENV TZ=Europe/Warsaw
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # Install basic packages
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN DEBIAN_FRONTEND=noninteractive \
+    apt-get update && apt-get install -y --no-install-recommends \
       bzip2 \
       g++ \
       git \
@@ -17,7 +21,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       htop \
       sudo \
       openssh-server \
-      wget && rm -rf /var/lib/apt/lists/*
+      wget \
+      nodejs \
+      npm && rm -rf /var/lib/apt/lists/*
 
 # Install conda
 ENV CONDA_DIR /opt/conda
