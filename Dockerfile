@@ -53,6 +53,7 @@ RUN chown -R dl:dl_group /home/dl && \
     chmod -R a+w /home/dl
 
 # Set up password for `dl` user
+RUN echo 'root:deep-learning' | chpasswd
 RUN echo 'dl:deep-learning' | chpasswd
 RUN mkdir /var/run/sshd
 
