@@ -1,0 +1,10 @@
+version: "3.0"
+services:
+  main:
+    image: rnoxy/deep-learning:cuda11.2
+    build: .
+    ports:
+      - "45822:22"
+      - "45888:8888"
+    runtime: nvidia
+    privileged: true
