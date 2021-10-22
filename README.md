@@ -6,5 +6,6 @@ Docker set up for my deep-learning images `rnoxy/deep-learning`; see https://hub
 
 ## Start service
 > `docker-compose start`
-This will start the container that you car SSH into with command
+
+This will start the container that you can _SSH_ into with command
 > `ssh localhost -l dl -p 45822` (see the `ports` setup in [docker-compose.yml](docker-compose.yml))
