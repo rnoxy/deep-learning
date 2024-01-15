@@ -7,7 +7,7 @@ notebook
 pillow
 pyyaml
 six
-tensorflow==2.6.0
+tensorflow
 torch
 torchvision
 torchaudio
@@ -19,3 +19,8 @@ jupyter_nbextensions_configurator
 tensorboardX
 polyaxon 
 icecream
+kedro
+wandb
+lightning
+diffusers
+transformers
